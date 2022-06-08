@@ -1,0 +1,38 @@
+#promotion-container {
+  .content {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    color: $white;
+    text-align: center;
+    min-height: 400px;
+    font-size: 16px;
+    @include media-breakpoint-down(lg) { min-height: 400px; }
+    @include media-breakpoint-down(md) { min-height: 300px; }
+    @include media-breakpoint-down(sm) { min-height: 175px; }
+    .overlay {
+      padding: 55px;
+      background: rgba($black, .4);
+      height: 100%;
+      width: 100%;
+      @include media-breakpoint-down(md) { padding: 25px; }
+      @include media-breakpoint-down(sm) { padding: 30px; }
+    }
+  }
+
+  .horizontal-bar {
+    @include horizontal-bar;
+    width: 150px;
+  }
+  .highlight {
+    @include text-highlight;
+    @include text-xxl;
+    padding: 15px;
+    line-height: 28px;
+    font-family: 'Nixie One';
+    @include media-breakpoint-down(md) {
+      padding: 10px;
+    }
+  }
+}

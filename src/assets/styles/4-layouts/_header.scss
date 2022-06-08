@@ -1,0 +1,83 @@
+#header-container {
+  z-index: 10000;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  transition: .4s ease;
+  color: $white;
+
+  @include media-breakpoint-down(md) { height: 70px; }
+  
+  .header-logo {
+    height: 60px;
+    img { height: 100%;}
+    @include media-breakpoint-down(md) { height: 50px; }
+  }
+  .burger-header {
+    div { background: $white; }
+  }
+
+  .navigation-holder {
+    align-items: center;
+    margin-left: auto;
+    transition: .4s ease;
+    
+    .navigation-link {
+      margin-left: 45px;
+      transition: .4s ease;
+
+      @include media-breakpoint-down(md) {
+        transition: .4s ease;
+        margin-left: 0px;
+        display: block;
+        text-align: center;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        &:last-child { margin-bottom: 0px; }
+      }
+    }
+    @include media-breakpoint-down(md) {
+      box-shadow: 0px 12px 10px rgba(23, 23, 23, 0.05);
+      height: 0px;
+      overflow: hidden;
+      position: absolute;
+      left: 0px;
+      top: 70px;
+      width: 100%;
+      background: transparent;
+      &.toggled {
+        height: 160px;
+        display: block;
+        background: white;
+      }
+    }
+  }
+
+  &.is-scrolled {
+    background: white;
+    box-shadow: 0px 12px 10px rgba(23, 23, 23, 0.05);
+    .navigation-link { color: $black; }
+    .burger-header {
+      div { background: $black; }
+    }
+  }
+  @include media-breakpoint-down(md) {
+    &.toggled {
+      background: white;
+      .navigation-link {
+        color: $black;
+        &:hover {
+          color: white;
+          background: $color-primary;
+        }
+      }
+      .burger-header {
+        div { background: $black; }
+      }
+    }
+  }
+}

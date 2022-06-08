@@ -1,0 +1,12 @@
+.btn-clear {
+  text-decoration: none !important;
+  background: none;
+  border: none;
+  outline: none;
+  &:hover,
+  &:focus {
+    text-decoration: none !important;
+    outline: none;
+  }
+  padding: 0px;
+}

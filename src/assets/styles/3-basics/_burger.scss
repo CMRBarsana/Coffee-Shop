@@ -1,0 +1,35 @@
+.burger-header {
+  display: none;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    position: relative;
+    height: 18px;
+    width: 24px;
+    
+    div {
+      background: $black;
+      height: 2px;
+      width: 24px;
+      position: absolute;
+      left: 0px;
+      transition: .2s ease;
+    }
+    div:nth-child(1) { top: 0px; }
+    div:nth-child(2) { top: 8px; }
+    div:nth-child(3) { top: 16px; }
+
+    &.toggled {
+      pointer-events: none;
+      div:nth-child(1) {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+      div:nth-child(2) { display: none; }
+      div:nth-child(3) {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// HELPERS - variables [colors, fonts, functions, mixins]
+@import "1-helpers/index";
+
+// TOOLS - third party code, third party component styles [animate, normalize, smooth]
+@import "2-tools/index";
+
+// BASICS - websites basic parts, [base, button, global, links, reset, selection-color, typography]
+@import "3-basics/index";
+
+// LAYOUTS - big portions of website [header, footer, navigation, main-container, main-content] 
+@import "4-layouts/index";
+
+// MODULES - smaller portions of website, more specific, [logo-holder, image-holder, frame]
+@import "5-modules/index";
+
+// PAGES - mostly specific, templates, about, download, 
+@import "6-pages/index";

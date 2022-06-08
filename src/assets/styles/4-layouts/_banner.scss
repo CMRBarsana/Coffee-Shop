@@ -1,0 +1,109 @@
+@keyframes animationBanner {
+  0% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+#banner-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  
+  .banner-img {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    img {
+      z-index: -1;
+      position: absolute;
+      object-fit:cover;
+      min-height: 100vh;
+      min-width: 100vw;
+      max-height: 150vh;
+      max-width: 150vw;
+      right: 0px;
+      bottom: 0px;
+      
+      animation-name: animationBanner;
+      animation-duration: 3s;
+      animation-timing-function: ease-out;
+
+      @include media-breakpoint-down(xl) {
+        right: -15%;
+        min-width: 115vw;
+        bottom: -5%;
+        min-height: 105vh;
+      }
+      @include media-breakpoint-down(lg) {
+        right: -20%;
+        min-width: 120vw;
+        bottom: 0%;
+        min-height: 100vh;
+      }
+      @include media-breakpoint-down(md) {
+        right: -25%;
+        min-width: 125vw;
+      }
+      @include media-breakpoint-down(sm) {
+        right: -30%;
+        min-width: 130vw;
+      }
+    }
+  }
+
+  > .content {
+    .label {
+      padding-left: 16px;
+      font-size: 36px;
+      line-height: 28px;
+      color: $white;
+
+      @include media-breakpoint-down(md) {
+        padding-left: 12px;
+        font-size: 28px;
+        line-height: 20px;
+      }
+    }
+    .highlight {
+      @include text-highlight;
+      padding: 16px;
+      font-size: 58px;
+      line-height: 48px;
+      font-family: 'Nixie One';
+      width: fit-content;
+      
+      @include media-breakpoint-down(md) {
+        padding: 12px;
+        font-size: 50px;
+        line-height: 38px;
+      }
+      @include media-breakpoint-down(xs) {
+        padding: 12px;
+        font-size: 40px;
+        line-height: 36px;
+      }
+    }
+    .visit-us {
+      @include text-md;
+      border: 2px solid $white;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 14px;
+      padding-right: 14px;
+      background: none;
+      color: $white;
+      
+      @include media-breakpoint-down(md) {
+        @include text-sm;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+}

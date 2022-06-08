@@ -1,0 +1,19 @@
+#about-us-container {
+  background: $color-primary;
+  color: $white;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+
+  .horizontal-bar {
+    @include horizontal-bar;
+    width: 150px;
+  }
+}

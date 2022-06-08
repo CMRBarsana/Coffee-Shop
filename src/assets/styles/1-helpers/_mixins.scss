@@ -1,0 +1,50 @@
+@mixin text-xxl {
+  font-size: 24px;
+  @include media-breakpoint-down(lg) { font-size: 20px; }
+  @include media-breakpoint-down(sm) { font-size: 18px; }
+}
+@mixin text-xl {
+  font-size: 18px;
+  @include media-breakpoint-down(md) { font-size: 16px; }
+}
+@mixin text-lg {
+  font-size: 16px;
+  @include media-breakpoint-down(md) { font-size: 16px; }
+}
+@mixin text-md {
+  font-size: 14px;
+}
+@mixin text-sm {
+  font-size: 12px;
+}
+@mixin text-xs {
+  font-size: 10px;
+}
+@mixin text-highlight {
+  background: rgba($white, .85);
+  color: $black;
+}
+@mixin horizontal-bar {
+  background: $white;
+  height: 3px;
+}
+
+@mixin full-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+@mixin transition {
+  transition: (all 0.15 ease-in-out .1s);
+}
+
+@mixin button-effect {
+  @include transition;
+  &:hover {
+    opacity: .5;
+  }
+  &:focus, &:active {
+    // 
+  }
+}

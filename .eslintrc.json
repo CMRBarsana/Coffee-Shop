@@ -1,0 +1,50 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "prettier"
+    ],
+    "rules": {
+        "class-methods-use-this": "error",
+        "eslint linebreak-style": [0, "error", "windows"],
+        "func-names": "error",
+        "global-require": 0,
+        "import/extensions": 0,
+        "import/no-cycle": "off",
+        "import/no-unresolved": "off",
+        "jsx-a11y/label-has-for": "off",
+        "jsx-a11y/no-autofocus": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "linebreak-style": 0,
+        "no-console": "warn",
+        "no-unused-vars": "warn",
+        "no-process-exit": "error",
+        "no-underscore-dangle": "off",
+        "object-shorthand": "error",
+        "prettier/prettier": "error",
+        "react/jsx-filename-extension": [
+            1,
+            {
+              "extensions": [".js"]
+            }
+        ],
+        "react/jsx-one-expression-per-line": "off",
+        "react/prefer-stateless-function": "off"
+    }
+}

@@ -1,0 +1,21 @@
+html, body {
+  @include text-xl;
+  height: 100%;
+  font-family: poppins;
+  color: $black;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, label, p {
+  margin: 0px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:link, &:hover, &:visited, &:active{
+    color: inherit;
+    text-decoration: none;
+  }
+}
