@@ -9,11 +9,11 @@ function Banner() {
       </div>
       <div className="content">
         <div className="label mb-2">THE TASTE OF</div>
-        <div className="highlight mb-2">PERFECTION</div>
+        <div className="highlight-container mb-2">
+          <div className="highlight-bg">PERFECTION</div>
+        </div>
         <div className="d-flex">
-          <div className="visit-us">
-            <a href="#contacts-container">VISIT US</a>
-          </div>
+          <a href="#contacts-container" className="visit-us">VISIT US</a>
         </div>
       </div>
     </div>

@@ -38,13 +38,3 @@
 @mixin transition {
   transition: (all 0.15 ease-in-out .1s);
 }
-
-@mixin button-effect {
-  @include transition;
-  &:hover {
-    opacity: .5;
-  }
-  &:focus, &:active {
-    // 
-  }
-}
